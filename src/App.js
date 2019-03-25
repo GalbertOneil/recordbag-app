@@ -5,7 +5,7 @@ class App extends Component {
   constructor(props){
     super(props)
       this.state = {
-        test:''
+        test:[],
       }
   }
 
@@ -16,16 +16,23 @@ class App extends Component {
   getApi(){
     fetch(`https://api.discogs.com/database/search?q=nirvana&artist&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
     .then(res => res.json())
-    .then(json => console.log(json)
-    )
+    .then(json => {
+      this.setState({test: json.results})
+    }    )
     
   }
-
-
   render() {
+    let getArtist = this.state.test.map( artist => {
+      return(
+        <div>
+          <p>{artist.title}</p>
+          <p>{artist.year}</p>
+        </div>  
+      )
+    })
     return (
       <div className="App">
-        
+        {getArtist}
       </div>
     );
   }
