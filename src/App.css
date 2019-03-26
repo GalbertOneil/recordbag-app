@@ -7,9 +7,31 @@ header{
   height: 6vh;
 }
 
+
+.big-Box{
+  height: 78vh;
+  overflow: scroll;
+}
+
+.box{
+ margin:10% 5%;
+ font-size: 1vw;
+}
+
+
+.info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px 250px 250px;
+  
+}
+
 footer{
   background: #61dafb;
   height: 6vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   
 }
 
@@ -17,11 +39,13 @@ footer{
   color: #61dafb;
 }
 
-.info{
-  
-  
-}
+
 .search{
   border-radius: 6px;
+}
+
+.picture{
+  border-radius: 50%;
+  border: 2px solid black;
 }
 

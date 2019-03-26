@@ -18,10 +18,9 @@ class App extends Component {
       <div className="App">
         
         <Header />   
+        <Nav />
         <Main />
-        
         <Fav />
-      
         <Footer /> 
       
       </div>

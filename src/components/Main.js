@@ -26,24 +26,34 @@ export class Main extends Component {
       }
     
       renderData() {
+        
         if(this.state.data) {
           return this.state.data.map( artist => {
+              let year = artist.year || 'N/A'
+              let artista = artist.title || artist.title
+              let photo = artist.thumb || 'N/A'
             return(
+              
               <div className='box'>
-                <p>{artist.title}</p>
-                <p>{artist.year}</p>
-                <img src={artist.thumb} alt='covers' />
+                <p>{artista}</p>
+                <p>{year}</p>
+                <img className='picture' src={photo} alt='covers' />
               </div>  
+              
             )
+            
           })
+          
+          
         }
+        
       }
   render() {
 
     return (
-      <div>
+      <div className='big-Box'>
                  
-        <form
+        <form className='search'
           onSubmit={ e => this.getApi(e)}>
 
           <input className='search'
