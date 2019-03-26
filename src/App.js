@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Route, Link } from 'react-router-dom'
+import Main from './Main'
+import Header from './Header'
+import Nav from './Nav'
+import Footer from './Footer'
+import Fav from './Fav'
 
 
 
@@ -24,14 +30,12 @@ class App extends Component {
     fetch(`https://api.discogs.com/database/search?q=${this.state.searchTerm}&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
     .then(res => res.json())
     .then(json => {
-      console.log(json)
       this.setState({data: json.results})
     })
   }
 
   renderData() {
     if(this.state.data) {
-      console.log(this.state.data)
       return this.state.data.map( artist => {
         return(
           <div className='box'>
