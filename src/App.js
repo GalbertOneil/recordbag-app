@@ -1,81 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Link } from 'react-router-dom'
-import Main from './Main'
-import Header from './Header'
-import Nav from './Nav'
-import Footer from './Footer'
-import Fav from './Fav'
+import Main from './components/Main'
+import Header from './components/Header'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
+import Fav from './components/Fav'
 
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-      this.state = {
-        data:'',
-        searchTerm: ''
-      }
-      
-  }
-
-  showChange(event){
-    this.setState({
-      searchTerm: event.target.value
-    })
-  }
-
-  getApi(e){
-    e.preventDefault()
-    fetch(`https://api.discogs.com/database/search?q=${this.state.searchTerm}&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
-    .then(res => res.json())
-    .then(json => {
-      this.setState({data: json.results})
-    })
-  }
-
-  renderData() {
-    if(this.state.data) {
-      return this.state.data.map( artist => {
-        return(
-          <div className='box'>
-            <p>{artist.title}</p>
-            <p>{artist.year}</p>
-            <img src={artist.thumb} />
-          </div>  
-        )
-      })
-    }
-  }
+ 
 
   render() {
    
     return (
       <div className="App">
-      <header>
-        <h1>RECORD BAG APP</h1>
-      </header>
-            
-        <form
-          onSubmit={ e => this.getApi(e)}>
-
-          <input
-          name='search-box'
-          type='text'
-          placeholder='enter search term'
-          value={this.state.searchTerm}
-          onChange={event => this.showChange(event)}/>
-          <button >Submit</button>
-        </form>
-
-        {this.renderData()}
+        
+        <Header />   
+        <Main />
+        
+        <Fav />
       
-
-      <footer>
-        <h5>Record Bag est.2019</h5>
-      </footer>
-
+        <Footer /> 
+      
       </div>
+      
+   
     );
   }
 }
