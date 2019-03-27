@@ -8,32 +8,28 @@ export class Main extends Component {
         super(props)
           this.state = {
             data:'',
-            searchTerm: ''
+            searchTerm: '',
+            details: ''
           }
-          this.handleClick = this.handleClick.bind(this);
+        
           
       }
-      
-      handleClick(){
-        console.log('ok')
-        if(this.state.data){
-          return this.state.data.map( artist => {
-            let details = artist.master_url || artist.master_url
-            return(
-              <div>
-                <p>{details}</p>
-              </div>
-            )
-          })
-        }
-        
+      handleClick(details){
+        fetch(details)
+        .then(res => res.json()
+        .then(json => {
+          this.setState({details: json.master_url})
+        }))
+        console.log(details)
       }
+      
     
       showChange(event){ 
         this.setState({
           searchTerm: event.target.value
         })
       }
+    
     
       getApi(e){
         e.preventDefault()
@@ -50,14 +46,18 @@ export class Main extends Component {
               let year = artist.year || 'Unknown'
               let artista = artist.title || artist.title
               let photo = artist.thumb || logo
+              let details = artist.master_url || artist.master_url
             return(
               
               <div className='box'>
                 <p>{artista}</p>
                 <p>{year}</p>
-                <img onClick= {this.handleClick} 
+                <img 
+                onClick={ () => this.handleClick(details)} 
+
                 className='picture'
                 src={photo} alt='pic' />
+                
               </div>  
               
             )
@@ -87,7 +87,6 @@ export class Main extends Component {
 
       <div className='info'>
         {this.renderData()}
-        {this.handleClick.master_url}
       </div>  
 
             

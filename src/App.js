@@ -16,15 +16,23 @@ class App extends Component {
   render() {
    
     return (
-
-
+      
+      
       
       <div className="App">
         
+        <Link to='/Albumdetail'>Album details</Link>
+        <Link to='/Main'>Main</Link>
+
         <Header />  
         <Search /> 
-        <Albumdetail />
-        <Main />
+        <Route
+          path='/Albumdetail'
+          component={Albumdetail}
+        />
+        <Route 
+        exact path="/Main" 
+        component={Main} />
         <Nav />
         <Footer /> 
       
