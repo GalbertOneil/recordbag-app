@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Fav from './components/Fav'
+import Search from './components/Search'
 
 
 
@@ -17,7 +18,8 @@ class App extends Component {
     return (
       <div className="App">
         
-        <Header />   
+        <Header />  
+        <Search /> 
         <Nav />
         <Main />
         <Fav />

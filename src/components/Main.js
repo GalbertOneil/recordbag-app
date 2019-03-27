@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import logo from './NA.jpg'
 
 export class Main extends Component {
     constructor(props){
@@ -29,15 +30,15 @@ export class Main extends Component {
         
         if(this.state.data) {
           return this.state.data.map( artist => {
-              let year = artist.year || 'N/A'
+              let year = artist.year || 'Unknown'
               let artista = artist.title || artist.title
-              let photo = artist.thumb || 'N/A'
+              let photo = artist.thumb || logo
             return(
               
               <div className='box'>
                 <p>{artista}</p>
                 <p>{year}</p>
-                <img className='picture' src={photo} alt='covers' />
+                <img className='picture' src={photo} alt='pic' />
               </div>  
               
             )
