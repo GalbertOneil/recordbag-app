@@ -6,7 +6,7 @@ export class Header extends Component {
       <div>
 
         <header>
-         <h1>RECORD BAG APP</h1>
+         <h1>RECORD BAG </h1>
         </header>
         
       </div>

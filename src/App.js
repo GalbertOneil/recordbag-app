@@ -5,7 +5,7 @@ import Main from './components/Main'
 import Header from './components/Header'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import Fav from './components/Fav'
+import Albumdetail from './components/Albumdetail'
 import Search from './components/Search'
 
 
@@ -16,13 +16,16 @@ class App extends Component {
   render() {
    
     return (
+
+
+      
       <div className="App">
         
         <Header />  
         <Search /> 
-        <Nav />
+        <Albumdetail />
         <Main />
-        <Fav />
+        <Nav />
         <Footer /> 
       
       </div>

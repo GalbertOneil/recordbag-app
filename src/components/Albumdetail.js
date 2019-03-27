@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-export class Fav extends Component {
-  r
+export class Albumdetail extends Component {
+  
 
   render() {
     return (
@@ -12,4 +12,5 @@ export class Fav extends Component {
   }
 }
 
-export default Fav
+export default Albumdetail
+

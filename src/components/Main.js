@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import logo from './NA.jpg'
 
+
+
 export class Main extends Component {
     constructor(props){
         super(props)
@@ -8,10 +10,26 @@ export class Main extends Component {
             data:'',
             searchTerm: ''
           }
+          this.handleClick = this.handleClick.bind(this);
           
       }
+      
+      handleClick(){
+        console.log('ok')
+        if(this.state.data){
+          return this.state.data.map( artist => {
+            let details = artist.master_url || artist.master_url
+            return(
+              <div>
+                <p>{details}</p>
+              </div>
+            )
+          })
+        }
+        
+      }
     
-      showChange(event){
+      showChange(event){ 
         this.setState({
           searchTerm: event.target.value
         })
@@ -27,7 +45,6 @@ export class Main extends Component {
       }
     
       renderData() {
-        
         if(this.state.data) {
           return this.state.data.map( artist => {
               let year = artist.year || 'Unknown'
@@ -38,7 +55,9 @@ export class Main extends Component {
               <div className='box'>
                 <p>{artista}</p>
                 <p>{year}</p>
-                <img className='picture' src={photo} alt='pic' />
+                <img onClick= {this.handleClick} 
+                className='picture'
+                src={photo} alt='pic' />
               </div>  
               
             )
@@ -57,20 +76,23 @@ export class Main extends Component {
         <form className='search'
           onSubmit={ e => this.getApi(e)}>
 
-          <input className='search'
-          name='search-box'
-          type='text'
-          placeholder='enter search term'
-          value={this.state.searchTerm}
-          onChange={event => this.showChange(event)}/>
-          <button >Submit</button>
+            <input className='search'
+            name='search-box'
+            type='text'
+            placeholder='enter search term'
+            value={this.state.searchTerm}
+            onChange={event => this.showChange(event)}/>
+            <button >Submit</button>
         </form>
 
       <div className='info'>
         {this.renderData()}
+        {this.handleClick.master_url}
       </div>  
-              
-      </div>
+
+            
+    </div>
+      
     )
   }
 }
