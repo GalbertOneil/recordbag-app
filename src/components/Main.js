@@ -76,13 +76,13 @@ export class Main extends Component {
         <form className='search'
           onSubmit={ e => this.getApi(e)}>
 
-            <input className='search'
+            <input className='placeholder'
             name='search-box'
             type='text'
             placeholder='enter search term'
             value={this.state.searchTerm}
             onChange={event => this.showChange(event)}/>
-            <button >Submit</button>
+            <button className='submit'>SEARCH</button>
         </form>
 
       <div className='info'>

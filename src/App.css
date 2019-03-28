@@ -16,8 +16,9 @@ header{
   height: 6vh;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 3px solid white;
+  border-radius: 7px;
 }
 
 
@@ -27,6 +28,7 @@ header{
   font-family: 'Work Sans', sans-serif;
   background: #DAECE6;
   border: 3px solid white;
+  border-radius: 7px;
 }
 
 .box{
@@ -48,12 +50,12 @@ footer{
   height: 6vh;
   align-items: center;
   display: flex;
-  /* justify-content: center; */
   border: 3px solid white;
   justify-content: space-evenly;
-
-  
+  border-radius: 7px;
+   
 }
+
 
 .App-link {
   color: #61dafb;
@@ -62,16 +64,28 @@ footer{
 
 .search{
   border-radius: 6px;
-  width: 40%;
-  height: 20px;
-  display: inline-block;
+  display: flex;
+  align-self: auto;
   margin-top: 10px;
-  
-  
-  
-  
-  
+  position: fixed;
+  margin-left: 570px;
+
+ 
 }
+
+.placeholder{
+  width: 250px;
+  height: 18px;
+  border-radius:3px;
+}
+.submit{
+  color: black;
+  background: #95B0B4;
+  width: 80px;
+  height: 24px;
+  border-radius: 3px;
+}
+
 
 .picture{
   border-radius: 50%;
