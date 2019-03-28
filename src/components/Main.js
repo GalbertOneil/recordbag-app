@@ -9,27 +9,22 @@ export class Main extends Component {
           this.state = {
             data:'',
             searchTerm: '',
-            details: ''
+            details: []
           }
         
           
-      }
-      handleClick(details){
-        fetch(details)
-        .then(res => res.json()
-        .then(json => {
-          this.setState({details: json.master_url})
-        }))
-        console.log(details)
+      
+           
+        
+        
       }
       
-    
       showChange(event){ 
         this.setState({
           searchTerm: event.target.value
         })
       }
-    
+     
     
       getApi(e){
         e.preventDefault()
@@ -46,18 +41,17 @@ export class Main extends Component {
               let year = artist.year || 'Unknown'
               let artista = artist.title || artist.title
               let photo = artist.thumb || logo
-              let details = artist.master_url || artist.master_url
-            return(
               
-              <div className='box'>
+              return(
+              
+              <div className='box' key={artist.id}>
+
                 <p>{artista}</p>
                 <p>{year}</p>
                 <img 
-                onClick={ () => this.handleClick(details)} 
-
                 className='picture'
                 src={photo} alt='pic' />
-                
+                    
               </div>  
               
             )
@@ -79,7 +73,7 @@ export class Main extends Component {
             <input className='placeholder'
             name='search-box'
             type='text'
-            placeholder='enter search term'
+            placeholder=''
             value={this.state.searchTerm}
             onChange={event => this.showChange(event)}/>
             <button className='submit'>SEARCH</button>
@@ -88,8 +82,8 @@ export class Main extends Component {
       <div className='info'>
         {this.renderData()}
       </div>  
-
-            
+      
+       
     </div>
       
     )

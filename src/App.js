@@ -21,7 +21,7 @@ class App extends Component {
       
       <div className="App">
        <div className='navi'>
-        <Link to='/Albumdetail'>Album details</Link>
+        <Link to='/Albumdetail'>About Page</Link>
         <Link to='/Main'>Main</Link>
       </div> 
 

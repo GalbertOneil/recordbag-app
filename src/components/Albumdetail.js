@@ -14,6 +14,7 @@ export class Albumdetail extends Component {
       <div className='detailBody'>
          
           <h1>This is where i want to render the album details</h1>
+          
 
       </div>
 
