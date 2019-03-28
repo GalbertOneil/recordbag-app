@@ -10,12 +10,15 @@ export class Albumdetail extends Component {
   render() {
 
     return (
-      <div>
-             <h1> I'm in Album detail</h1>    
-        
+      
+      <div className='detailBody'>
+         
+          <h1>This is where i want to render the album details</h1>
+
+      </div>
 
       
-      </div>  
+      
 
             
     

@@ -20,9 +20,10 @@ class App extends Component {
       
       
       <div className="App">
-        
+       <div className='navi'>
         <Link to='/Albumdetail'>Album details</Link>
         <Link to='/Main'>Main</Link>
+      </div> 
 
         <Header />  
         <Search /> 
