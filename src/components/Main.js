@@ -11,12 +11,7 @@ export class Main extends Component {
             searchTerm: '',
             details: []
           }
-        
-          
-      
-           
-        
-        
+               
       }
       
       showChange(event){ 
@@ -63,7 +58,7 @@ export class Main extends Component {
         
       }
   render() {
-
+    
     return (
       <div className='big-Box'>
                  

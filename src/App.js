@@ -17,24 +17,27 @@ class App extends Component {
    
     return (
       
-      
-      
-      <div className="App">
+       <div className="App">
+
        <div className='navi'>
         <Link to='/Albumdetail'>About Page</Link>
         <Link to='/Main'>Main</Link>
       </div> 
 
         <Header />  
+
         <Search /> 
+
         <Route
           path='/Albumdetail'
           component={Albumdetail}
         />
+
         <Route 
         exact path="/Main" 
         component={Main} />
         <Nav />
+        
         <Footer /> 
       
       </div>

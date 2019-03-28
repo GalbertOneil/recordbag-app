@@ -29,6 +29,7 @@ header{
   background: #DAECE6;
   border: 3px solid white;
   border-radius: 7px;
+  
 }
 
 .box{
@@ -69,6 +70,7 @@ footer{
   margin-top: 10px;
   position: fixed;
   margin-left: 570px;
+  margin-right: 570px;
 
  
 }
@@ -115,6 +117,9 @@ a{
   font-family: 'Work Sans', sans-serif;
   background: #DAECE6;
   border: 3px solid white;
+}
+.description{
+  font-size: 25px;
 }
 
 
