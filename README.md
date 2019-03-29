@@ -12,4 +12,4 @@ Press search bar.
 Scroll to see discography of your search (if necessary).
 
 # Photos:
-![Main Page](src/images/Main.png)
+![Main](src/images/Main.png)
