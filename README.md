@@ -13,3 +13,8 @@ Scroll to see discography of your search (if necessary).
 
 # Photos:
 ![Main](/src/images/Main.png)
+![Search Results](src/images/MainResults.png)
+![About Page](/src/images/AboutPage.png)
+
+# Code:
+![code snippet](/src/images/Codesnippet.png)
