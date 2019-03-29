@@ -31,3 +31,5 @@ Record bag is a search engine that display a comprehensive list of the discograp
 * Resolution:
 1. Due to the time factor wasn't able to add the feature to cick the album and get the information, for sure it will be ready for version 2.0
 
+# Deployable link:
+[heroku]https://recordbag-app.herokuapp.com/Main
