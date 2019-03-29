@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../images/NA.jpg'
+import logo from './NA.jpg'
 
 export class Main extends Component {
     constructor(props){
@@ -7,7 +7,6 @@ export class Main extends Component {
           this.state = {
             data:'',
             searchTerm: '',
-            details: []
           }
                
       }
