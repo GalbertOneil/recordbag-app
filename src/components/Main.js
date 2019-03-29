@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import logo from './NA.jpg'
-
-
+import logo from '../images/NA.jpg'
 
 export class Main extends Component {
     constructor(props){
@@ -19,8 +17,7 @@ export class Main extends Component {
           searchTerm: event.target.value
         })
       }
-     
-    
+         
       getApi(e){
         e.preventDefault()
         fetch(`https://api.discogs.com/database/search?q=${this.state.searchTerm}&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
@@ -48,12 +45,10 @@ export class Main extends Component {
                 src={photo} alt='pic' />
                     
               </div>  
-              
             )
             
           })
-          
-          
+                   
         }
         
       }
@@ -77,8 +72,7 @@ export class Main extends Component {
       <div className='info'>
         {this.renderData()}
       </div>  
-      
-       
+             
     </div>
       
     )

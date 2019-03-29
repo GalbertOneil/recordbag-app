@@ -16,7 +16,7 @@ export class Albumdetail extends Component {
           <h1>RECORD BAG</h1>
             <p><u>Description:</u>
               <br />
-              Record bag is a search engine that display a comprehensive list of the discographies of artists and bands.</p>
+              Record bag is a search engine that displays a comprehensive list of the discographies of artists and bands.</p>
             <p><u>Instructions:</u>
               <br />
               1.Enter a name on the search.

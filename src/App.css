@@ -7,8 +7,6 @@
 .App {
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-
-  
 }
 
 header{
@@ -21,7 +19,6 @@ header{
   border-radius: 7px;
 }
 
-
 .big-Box{
   height: 82vh;
   overflow: scroll;
@@ -29,22 +26,18 @@ header{
   background: #DAECE6;
   border: 3px solid white;
   border-radius: 7px;
-  
-}
+ }
 
 .box{
  margin:10% 5%;
  font-size: 1vw;
+ }
  
-}
- 
-
 .info{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 250px 250px 250px 250px;
-  
-}
+ }
 
 footer{
   background:  #95B0B4;
@@ -54,14 +47,11 @@ footer{
   border: 3px solid white;
   justify-content: space-evenly;
   border-radius: 7px;
-   
-}
-
+ }
 
 .App-link {
   color: #61dafb;
 }
-
 
 .search{
   border-radius: 6px;
@@ -71,8 +61,6 @@ footer{
   position: fixed;
   margin-left: 570px;
   margin-right: 570px;
-
- 
 }
 
 .placeholder{
@@ -81,6 +69,7 @@ footer{
   border-radius:3px;
   font-size: 15px;
 }
+
 .submit{
   color: black;
   background: #95B0B4;
@@ -89,26 +78,23 @@ footer{
   border-radius: 3px;
 }
 
-
 .picture{
   border-radius: 50%;
   border: 4px solid #95B0B4;
   width: 158px;
   height: 158px;
 }
+
 .navi{
-  
   display: flex ;
   justify-content: space-evenly;
   background-color: #DAECE6;
   border: 3px solid white;
   border-radius: 6px;
-
 }
 
 a{
   color: black;
-  
 }
 
 .detailBody{
@@ -118,6 +104,7 @@ a{
   background: #DAECE6;
   border: 3px solid white;
 }
+
 .description{
   font-size: 25px;
 }
