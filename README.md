@@ -1,9 +1,6 @@
-# Readme Project 2
+# RECORD BAG
 
-# Name: 
-Record Bag
-
-# Description:
+# Project Description:
 Record bag is a search engine that display a comprehensive list of the discographies of artists and bands.
 
 # Instructions:
