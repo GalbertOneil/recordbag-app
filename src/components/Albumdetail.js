@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from '../images/rblogo.png';
+
 
 export class Albumdetail extends Component {
   
-
 
     
   
@@ -13,17 +14,15 @@ export class Albumdetail extends Component {
       
       <div className='detailBody'>
          <div className='description'>
-          <h1>RECORD BAG</h1>
-            <p><u>Description:</u>
-              <br />
-              Record bag is a search engine that displays a comprehensive list of the discographies of artists and bands.</p>
-            <p><u>Instructions:</u>
-              <br />
-              1.Enter a name on the search.
-              <br />
-              2.Press search bar.
-              <br />
-              3.Scroll to see discography of your search (if necessary).</p> 
+          <img className='logo' src={logo} alt='logo'/>
+
+          <div className='allText'>
+            <p className='text1'>THE SEARCH ENGINE THAT</p>
+            <div className='rectangle'></div>
+            <p className='text2'>DISPLAYS A COMPREHENSIVE DISCOGRAPHIES</p> 
+            <p className='text3'>OF YOUR FAVORITE ARTISTS AND BANDS</p> 
+          </div>
+
             </div>   
           
 

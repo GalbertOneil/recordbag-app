@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
-export class Header extends Component {
+class Header extends Component {
+
+
   render() {
     return (
-      <div>
-
-        <header>
-         <h1>RECORD BAG </h1>
-        </header>
-        
-      </div>
+          <div className='navigator'>
+            <p className='appName' to='AlbumDetail'>RECORD BAG </p>
+              <div className='navi'>
+                <Link className='home' to='/'>Home</Link>
+                <Link className='searchButton' to='/Main'>Search</Link>
+              </div>
+          </div>
     )
   }
 }

@@ -1,112 +1,193 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-
+/* --------------------- HEADER ------------------------------------ */
 
 .App {
-  text-align: center;
-  font-family: 'Abril Fatface', cursive;
+    height: 100vh;
 }
 
-header{
-  background: #95B0B4;
-  height: 6vh;
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  border: 3px solid white;
-  border-radius: 7px;
+header {
+    background-color: #1f1e1e;
+    /* opacity: 0.61; */
+    width: 100%;
+    position: fixed;
+    height: 8vh;
 }
 
-.big-Box{
-  height: 82vh;
-  overflow: scroll;
-  font-family: 'Work Sans', sans-serif;
-  background: #DAECE6;
-  border: 3px solid white;
-  border-radius: 7px;
-  position: center;
- }
- .search{
-  border-radius: 6px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-self: auto;
-  align-self: auto;
-  align-items: center;
-  margin: 0 auto;
-  width: 240px;
+a {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
 }
 
-.placeholder{
-  width: 250px;
-  height: 18px;
-  border-radius:3px;
-  font-size: 15px;
+.navigator {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    background-color: #1f1e1e;
+    width: 100vw;
+    position: fixed;
+    height: 66px;
 }
 
-.box{
- margin:10% 5%;
- font-size: 1vw;
- }
- 
-.info{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 250px 250px 250px 250px;
- }
-
-footer{
-  background:  #95B0B4;
-  height: 6vh;
-  align-items: center;
-  display: flex;
-  border: 3px solid white;
-  justify-content: space-evenly;
-  border-radius: 7px;
- }
-
-.App-link {
-  color: #61dafb;
+.appName {
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: italic;
+    color: white;
+    margin-right: 1001px;
+    /* position: relative;
+    display: flex; */
 }
 
 
+/* ---------------------------- ALBUMDETAIL LANDING PAGE ------------- */
 
-.submit{
-  color: black;
-  background: #95B0B4;
-  width: 80px;
-  height: 24px;
-  border-radius: 3px;
+.logo {
+    height: 120px;
+    object-fit: contain;
+    margin-top: -30px;
 }
 
-.picture{
-  border-radius: 50%;
-  border: 4px solid #95B0B4;
-  width: 158px;
-  height: 158px;
+.allText {
+    margin-top: 30px;
+    font-family: Poppins;
+    font-size: 27px;
+    font-style: italic;
+    font-stretch: normal;
+    letter-spacing: 4.4px;
+    line-height: 34px;
+    text-align: center;
+    color: #ffffff;
 }
 
-.navi{
-  display: flex ;
-  justify-content: space-evenly;
-  background-color: #DAECE6;
-  border: 3px solid white;
-  border-radius: 6px;
+.text2 {
+    margin-top: -38px;
+    font-weight: bolder;
 }
 
-a{
-  color: black;
+.rectangle {
+    width: 1061px;
+    height: 46px;
+    background: #240d26;
+    /* opacity: 0.67; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.detailBody{
-  height: 82vh;
-  overflow: scroll;
-  font-family: 'Work Sans', sans-serif;
-  background: #DAECE6;
-  border: 3px solid white;
+.big-Box {
+    height: 95vh;
+    overflow: scroll;
+    font-family: Poppins;
+    background: center / cover no-repeat url('./images/RecordBack-BGImage.png');
+    /* position: relative; */
 }
 
-.description{
-  font-size: 25px;
+
+/* ------------------------------ SEARCH FORM ------------------------ */
+
+.search {
+    border-radius: 6px;
+    display: flex;
+    align-self: auto;
+    justify-content: center;
+    margin-top: 83px;
 }
+
+.placeholder {
+    width: 250px;
+    height: 18px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: Poppins;
+}
+
+
+/* --------------------------- DETAIL SEARCH // MAIN.JS ------------ */
+
+.box {
+    color: #ffffff;
+    font-weight: 900;
+    margin: 0% 27%;
+    font-size: 1vw;
+    line-height: 1.2;
+}
+
+.info {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 250px 250px 250px 250px; */
+}
+
+.submit {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    background: #1f1e1e;
+    width: 80px;
+    height: 24px;
+    border-radius: 3px;
+}
+
+.picture {
+    border-radius: 6px;
+    border: 4px solid #1f1e1e;
+    width: 158px;
+    height: 158px;
+}
+
+.detailBody {
+    height: 95vh;
+    overflow: scroll;
+    background: center / cover no-repeat url('./images/djbackg.png');
+}
+
+.description {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 140px;
+}
+
+
+/* .square-artistInfo {
+        width: 1061px;
+        height: 46px;
+        background: #240d26;
+    } */
+
+
+/* ------------------------- FOOTER ------------------------------- */
+
+footer {}
+
+.date {
+    margin-left: 50px;
+}
+
+.design {
+    margin-right: 50px;
+}
+
+.copy {
+    font-family: Poppins;
+    font-weight: 700;
+    background: #1f1e1e;
+    width: 100%;
+    position: fixed;
+    /* opacity: 0.6; */
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+
+/* ---------------------------- SEARCH --------------------------- */

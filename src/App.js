@@ -11,58 +11,53 @@ import Search from './components/Search'
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-      this.state = {
-        test:''
-      }
-  }
+    constructor(props) {
+        super(props)
+        this.state = {
+            test: ''
+        }
+    }
 
-  componentDidMount(){
-    this.getApi()
-  }
+    componentDidMount() {
+        this.getApi()
+    }
 
-  getApi(){
-    fetch(`https://api.discogs.com/database/search?q=nirvana&artist&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
-    .then(res => res.json())
-    .then(json => console.log(json)
-    )
-    
-  }
+    getApi() {
+        fetch(`https://api.discogs.com/database/search?q=nirvana&artist&key=VEctSuuCuMHXlAVksAkq&secret=PtXPNMRuvbyntjqVbaCKQrOPSLoUksLP`)
+            .then(res => res.json())
+            .then(json => console.log(json))
+
+    }
 
 
-  render() {
+    render() {
+
+        return (
+
+            <div className = "App" >
+
+           
+            <Header />
+
+            <Search />
+
+           
+            <Route exact path = '/'
+            component = { Albumdetail }
+            />
+
+            <Route exact path = "/Main"
+            component = { Main }
+            /> 
+            <Nav />
+
+            <Footer />
+
+            </div>
+
    
-    return (
-      
-       <div className="App">
-
-       <div className='navi'>
-        <Link to='/Albumdetail'>About Page</Link>
-        <Link to='/Main'>Main</Link>
-      </div> 
-
-        <Header />  
-
-        <Search /> 
-
-        <Route
-          path='/Albumdetail'
-          component={Albumdetail}
-        />
-
-        <Route 
-        exact path="/Main" 
-        component={Main} />
-        <Nav />
-        
-        <Footer /> 
-      
-      </div>
-      
-   
-    );
-  }
+        );
+    }
 }
 
 export default App;

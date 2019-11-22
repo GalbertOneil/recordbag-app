@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 
-export class Footer extends Component {
+class Footer extends Component {
   render() {
     return (
-      <div>
-        <footer>
-            <h5>Record Bag est.2019</h5>
-            <h6>By: Galbert Oneil</h6>
-        </footer>
-        
-      </div>
+          <div className='copy'>
+            <h5 className='date'>Record Bag est.2019</h5>
+            <h6 className='design'>Created By: Galbert Oneil</h6>
+          </div>
     )
   }
 }
